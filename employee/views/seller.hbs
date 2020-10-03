@@ -1,0 +1,42 @@
+<center><h2>Employee Table</h2></center>
+<br>
+<br>
+<br>
+<div class="row">
+
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                    <th scope="col">Employee ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">NIC</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Contact No</th>
+            </tr>
+            </thead>
+         <tbody>
+             {{#each emp}}
+            <tr>
+                    <td>{{ this.Emp_id }}</td>
+                    <td>{{ this.Name }}</td>
+                    <td>{{ this.Gender }}</td>
+                    <td>{{ this.NIC }}</td>
+                    <td>{{ this.E_mail }}</td>
+                    <td>{{ this.Contact_no }}</td>
+                    <td>
+                         
+                    <a href="/update/{{ this.id }}"><button class="btn btn-primary">Edit</button></a>
+                    <button class="btn btn-primary">Delete</button>
+                    </td>
+            </tr>
+            {{/each}}
+       
+        </tbody>
+        </table>
+    </div>
+</div>
+
